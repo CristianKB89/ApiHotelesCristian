@@ -1,5 +1,4 @@
-﻿using System;
-using FxHotelCalifornia.Interfaces;
+﻿using FxHotelCalifornia.Interfaces;
 
 namespace FxHotelCalifornia.Models
 {

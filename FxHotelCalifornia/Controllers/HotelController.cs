@@ -1,7 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FxHotelCalifornia.Models;
 using FxHotelCalifornia.Services;
-using FxHotelCalifornia.Models;
-using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
 
 namespace FxHotelCalifornia.Controllers
 {
@@ -43,7 +42,7 @@ namespace FxHotelCalifornia.Controllers
         }
 
         [HttpPost]
-        public ActionResult <Hotel> CreateHotel(Hotel hotel)
+        public ActionResult<Hotel> CreateHotel(Hotel hotel)
         {
             _dbServices.CreateHotel(hotel);
             return Ok(hotel);

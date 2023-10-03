@@ -1,14 +1,13 @@
-﻿using System;
-using FxHotelCalifornia.Interfaces;
-using Microsoft.Extensions.Options;
+﻿using FxHotelCalifornia.Interfaces;
 using FxHotelCalifornia.Models;
+using Microsoft.Extensions.Options;
 using System.Net;
 using System.Net.Mail;
 
 namespace FxHotelCalifornia.Services
 {
-	public class EmailSender : IEmailSender
-	{
+    public class EmailSender : IEmailSender
+    {
         private readonly EmailSettings _emailSettings;
 
         public EmailSender(IOptions<EmailSettings> emailSettings)
@@ -46,4 +45,3 @@ namespace FxHotelCalifornia.Services
         }
     }
 }
-

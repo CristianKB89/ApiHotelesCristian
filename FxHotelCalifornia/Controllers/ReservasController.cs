@@ -1,22 +1,21 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc;
+﻿using FxHotelCalifornia.Models;
 using FxHotelCalifornia.Services;
-using FxHotelCalifornia.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace FxHotelCalifornia.Controllers
 {
-	[Route("api/[controller]")]
-	[ApiController]
-	public class ReservasController : ControllerBase
-	{
-		private readonly DbServices _dbServices;
-		private readonly EmailSender _emailSender;
+    [Route("api/[controller]")]
+    [ApiController]
+    public class ReservasController : ControllerBase
+    {
+        private readonly DbServices _dbServices;
+        private readonly EmailSender _emailSender;
 
-		public ReservasController (DbServices dbServices, EmailSender emailSender)
-		{
-			_dbServices = dbServices;
-			_emailSender = emailSender;
-		}
+        public ReservasController(DbServices dbServices, EmailSender emailSender)
+        {
+            _dbServices = dbServices;
+            _emailSender = emailSender;
+        }
 
         [HttpGet]
         public ActionResult<List<Reserva>> GetReservas()
@@ -49,7 +48,5 @@ namespace FxHotelCalifornia.Controllers
         {
             return Ok(_dbServices.UpdateReserva(reserva.Id, reserva));
         }
-
     }
 }
-

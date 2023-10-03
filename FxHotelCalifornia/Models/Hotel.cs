@@ -1,10 +1,9 @@
-﻿using System;
-using MongoDB.Bson.Serialization.Attributes;
+﻿using MongoDB.Bson.Serialization.Attributes;
 
 namespace FxHotelCalifornia.Models
 {
-	public class Hotel
-	{
+    public class Hotel
+    {
         [BsonId]
         [BsonRepresentation(MongoDB.Bson.BsonType.ObjectId)]
         public string? Id { get; set; }
@@ -25,4 +24,3 @@ namespace FxHotelCalifornia.Models
         public List<Habitacion> Habitaciones { get; set; }
     }
 }
-

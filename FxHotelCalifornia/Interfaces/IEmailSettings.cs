@@ -1,8 +1,7 @@
-﻿using System;
-namespace FxHotelCalifornia.Interfaces
+﻿namespace FxHotelCalifornia.Interfaces
 {
-	public interface IEmailSettings
-	{
+    public interface IEmailSettings
+    {
         string SmtpServer { get; set; }
         int SmtpPort { get; set; }
         string SmtpUsername { get; set; }
@@ -11,4 +10,3 @@ namespace FxHotelCalifornia.Interfaces
         string SenderName { get; set; }
     }
 }
-

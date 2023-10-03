@@ -9,7 +9,7 @@ builder.Services.AddSwaggerGen();
 // CREATE STARTUP INSTANCE
 var startup = new Startup(builder.Configuration);
 
-// CONFIGURE SERVICES 
+// CONFIGURE SERVICES
 startup.ConfigureServices(builder.Services);
 
 var app = builder.Build();
