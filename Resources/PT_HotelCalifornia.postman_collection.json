@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "781c86f1-7240-43cd-bde9-b38c876434e2",
+		"name": "PT_HotelCalifornia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20746293"
+	},
+	"item": [
+		{
+			"name": "GetHoteles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7197/api/Hotel",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7197",
+					"path": [
+						"api",
+						"Hotel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetReservas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7197/api/Reservas",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7197",
+					"path": [
+						"api",
+						"Reservas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateHotel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Id\": \"\",\n    \"nombre\": \"Hotel_California\",\n    \"direccion\": \"Av SiempreViva\",\n    \"ciudad\": \"Springfield\",\n    \"hotelHabilitado\":true,\n    \"habitaciones\": [\n        {\n            \"tipoHabitacion\": \"Doble\",\n            \"costoBase\": 0,\n            \"impuestos\": 0,\n            \"disponibilidad\": true,\n            \"ubicacionHabitacion\": \"4-413\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7197/api/Hotel",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7197",
+					"path": [
+						"api",
+						"Hotel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateHotel",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Id\": \"651bf8e06814545f0a928bcc\",\n    \"nombre\": \"Hotel_California\",\n    \"direccion\": \"Av SiempreViva 2\",\n    \"ciudad\": \"Springfield 2\",\n    \"hotelHabilitado\": true,\n    \"habitaciones\": [\n        {\n            \"tipoHabitacion\": \"Doble\",\n            \"costoBase\": 0,\n            \"impuestos\": 0,\n            \"disponibilidad\": true,\n            \"ubicacionHabitacion\": \"4-413\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7197/api/Hotel",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7197",
+					"path": [
+						"api",
+						"Hotel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateReserva",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fechaEntrada\": \"2023-10-03\",\n    \"fechaSalida\": \"2023-10-10\",\n    \"cantidadPersonas\": 1,\n    \"ciudadDestino\": \"Bogotá\",\n    \"habitacionElegida\": {\n        \"tipoHabitacion\": \"Doble\",\n        \"costoBase\": 150000,\n        \"impuestos\": 10,\n        \"disponibilidad\": true,\n        \"ubicacionHabitacion\": \"T4-413\"\n    },\n    \"usuario\": {\n        \"nombres\": \"Cristian\",\n        \"apellidos\": \"Castro\",\n        \"fechaNacimiento\": \"1992-02-20\",\n        \"genero\": \"Masculino\",\n        \"tipoDocumento\": \"Cédula\",\n        \"numeroDocumento\": \"10160423\",\n        \"email\": \"cristianiksl@yopmail.com\",\n        \"telefonoContacto\": \"2324342\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7197/api/Reservas",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7197",
+					"path": [
+						"api",
+						"Reservas"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
